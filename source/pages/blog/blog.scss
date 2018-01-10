@@ -1,0 +1,149 @@
+@import '../../components/mixin/media.scss';
+.blog-content{
+  position: relative;
+  width: 100%;
+  padding-top: rem(50px);
+  background-color: #faf8f0;
+  display: flex;
+  height: 100%;
+  @include phone{
+    padding-top: rem(20px);
+  }
+}
+.blog__aside {
+  width: 28%;
+  margin-right: rem(80px);
+  @include tablet{
+    display: none;
+  }
+  @include phone{
+    display: none;
+  }
+}
+.article-titles {
+  padding: 0 rem(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+}
+.article-titles__item {
+  text-align: right;
+  max-width: 17.5rem;
+  list-style-type: none;
+  @include laptop{
+    max-width: rem(275px);
+  }
+}
+.article-titles__item_active {
+  border-right: rem(3px) solid #4e8839;
+}
+.article-titles__link {
+  display: inline-block;
+  padding: 0.9375rem;
+  text-decoration: none;
+  color: #455a64;
+  line-height: 1.5;
+}
+.article-titles__item_active .article-titles__link {
+  color: #4e8839;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+.blog__content {
+  width: 72%;
+  padding-right: rem(70px);
+  @include tablet{
+    padding: 0 rem(24px);
+    width: 100%;
+  }
+  @include phone{
+    padding: 0 rem(4px);
+    width: 100%;
+  }
+
+}
+.article-list {
+  max-width: rem(900px);
+  margin: 0;
+  padding: 0;
+  @include laptop{
+    max-width: rem(680px);
+  }
+  @include tablet{
+    max-width: rem(720px);
+  }
+}
+.article-list__item {
+  border-bottom: rem(5px) solid #ecebe4;
+  margin-bottom: rem(70px);
+  list-style-type: none;
+  @include tablet{
+    margin-bottom: rem(50px);
+  }
+  @include phone{
+    margin-bottom: rem(30px);
+  }
+}
+.article-list__item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.article-list__title {
+  font-family: "Sansus Webissimo";
+  font-size: 35px;
+  color: #455a64;
+  padding-bottom: rem(30px);
+  margin: 0;
+  @include tablet{
+    font-size: 30px;
+  }
+  @include phone{
+    font-size: 21px;
+    padding-bottom: rem(20px);
+  }
+}
+.article-list__date {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding-bottom: rem(30px);
+  color: #4e8839;
+  @include tablet{
+    font-size: 14px;
+  }
+  @include phone{
+    font-size: 14px;
+    padding-bottom: rem(20px);
+  }
+}
+.article-list__text-content {
+  margin-bottom: rem(70px);
+  @include tablet{
+    margin-bottom: rem(50px);
+  }
+  @include phone{
+    margin-bottom: rem(30px);
+  }
+}
+.article-list__text-content p {
+  color: #455a64;
+  line-height: 1.5;
+  margin: 0;
+  padding-bottom: rem(20px);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  @include tablet{
+    font-size: 14px;
+  }
+  @include phone{
+    font-size: 14px;
+  }
+}
+.article-list__text-content p:last-child{
+  padding-bottom: 0;
+}
+.footer{
+  position: static;
+}

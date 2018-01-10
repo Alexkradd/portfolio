@@ -1,0 +1,30 @@
+$laptop-width: 1200px;
+$tablet-width: 768px;
+$phone-width: 320px;
+$baseFontSize : 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+@mixin laptop {
+  @media (min-width: #{769px}) and (max-width: #{$laptop-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{480px}) and (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+@mixin phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{480px}) {
+    @content;
+  }
+}

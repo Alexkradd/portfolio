@@ -1,0 +1,9 @@
+mixin socials(fill)
+    .socials
+        ul.socials__list
+            - var social=[{link:'http://vk.com', id:'vk'}, {link:'#', id:'github'}, {link: '#', id: 'in'}]
+               each item in social
+                  li.socials__item
+                     a(href=`${item.link}`).socials__link
+                       svg(id=`${item.id}` fill=fill).socials__icon
+                          use(xlink:href=`/images/sprite.svg#${item.id}`)

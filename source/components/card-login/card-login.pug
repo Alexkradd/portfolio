@@ -1,0 +1,33 @@
+.card-login
+
+        h2.title.title-desc.card-login__title Авторизуйтесь
+        .form
+            form(method="post" id="form-auth").form__el
+                .form__wrapper
+                    .form__row-text
+                        label(for="login").form__label-text
+                            i(aria-hidden="true").fa.fa-user
+                        input(type="text" id="login" name="login" placeholder="Логин").form__input-text
+                    .form__row-text
+                        label(for="password").form__label-text
+                            i(aria-hidden="true").fa.fa-key
+                        input(type="text" id="password" name="password" placeholder="Пароль").form__input-text
+                    .form__row-checkbox
+                        input(type="checkbox" value="1" id="human" name="human" checked="").form__input-checkbox
+                        label(for="human").form__label-checkbox Я человек
+                    .form__row-question
+                        span.form__question Вы точно не робот?
+                    .form__row-radio
+                        .form__block-radio
+                            input(id="testyes" type="radio" name="test" value="человек" checked="").form__input-radio
+                            label(for="testyes").form__label-radio Да
+                        .form__block-radio
+                            input(id="testno" type="radio" name="test" value="робот").form__input-radio
+                            label(for="testno").form__label-radio Не уверен
+        .card__buttons
+                - var welcome_buttons =[{link:'/works.html', id:'На главную', type:'mainBtn'}, {link:'/about.html', id:'Войти'}]
+                each item in welcome_buttons
+                    .welcome-buttons__item.login-buttons__item
+                        a.welcome-buttons__link(href=`${item.link}`, id=`${item.type}`)=item.id
+
+

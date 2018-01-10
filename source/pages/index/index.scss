@@ -1,0 +1,168 @@
+@import '../../components/mixin/media.scss';
+
+.wrapper{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.section{
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+.Background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.Background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent 50%, rgba(0, 0, 0, 0.5));
+}
+.welcome{
+  //background-image: url(./../../../img/bg.png);
+ // background-position: center center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+  flex-direction: column;
+  align-items: center;
+}
+.header{
+  display: flex;
+}
+.welcome__header{
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  @include phone{
+    justify-content: center;
+  }
+}
+.button{
+  display: flex;
+
+}
+.welcome__button{
+  padding: rem(15px) rem(25px);
+  background-color: transparent;
+  border-radius: rem(28px);
+  border: 1px solid white;
+  color: white;
+  margin-right: rem(100px);
+  margin-top: rem(25px);
+  font-family: 'Roboto medium';
+  font-size: 16px;
+  &:hover{
+    background-color: #4e8839;
+    border: 1px solid #729e19;
+  }
+  @include phone{
+    margin-right: 0;
+    margin-top: rem(10px);
+  }
+
+}
+.flip-card{
+  position: relative;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: 1s;
+  &.active{
+    transition: 1s;
+    transform: rotateY(180deg);
+  }
+
+}
+
+
+.welcome__card{
+  background: rgba(18,38,32,.6);
+  border-radius: rem(7px);
+}
+.card__buttons{
+  display: flex;
+}
+.welcome-buttons__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  &:first-child {
+    border-radius: 0 0 rem(5px) 0;
+  }
+  &:last-child {
+    border-color: transparent;
+    border-radius: 0 0 0 rem(5px);
+  }
+}
+.welcome-buttons__item{
+  display: flex;
+  list-style-type: none;
+  background-color: #639155;
+  padding: rem(15px) rem(32.3px);
+  border-right: rem(2px) solid #909f99;
+  &:hover{
+    background-color: #4a8039;
+  }
+  &:last-child{
+    border-color: transparent;
+    border-radius: 0 0 rem(7px) 0;
+  }
+  &:first-child {
+    border-radius: 0 0 0 rem(7px);
+  }
+  @include tablet{
+    padding: rem(15px) rem(25px);
+  }
+  @include phone{
+    padding: rem(15px) rem(20px);
+  }
+
+
+}
+.welcome-buttons__link{
+  text-decoration: none;
+  color: white;
+  font-family: 'Roboto medium';
+  font-size: 16px;
+  @include phone{
+    font-size: 14px;
+  }
+}
+
+
+.welcome__footer{
+  z-index: 1000;
+  padding-bottom: rem(40px);
+  display: flex;
+  @include phone{
+    padding-bottom: rem(10px);
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+.copy{
+  font-family: 'Roboto regular';
+  font-size: 16px;
+  color: white;
+  padding-left: rem(5px);
+  @include phone{
+    font-family: 'Roboto light';
+    font-size: 14px;
+    padding-left: 0;
+  }
+}
+.active-button{
+  display: none;
+  opacity: 0;
+}

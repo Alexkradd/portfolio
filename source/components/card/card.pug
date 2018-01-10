@@ -1,0 +1,29 @@
+include ../socials/socials
+mixin card(name,desc,subclass,flag,buttons,icon)
+    .card(class=subclass)
+        .card__avatar
+            img.card__image(src=require('./../../../img/man_1.png'), alt="avatar")
+        .card__content
+            .card__name=name
+            case subclass
+                when 1
+                    .card__subclass блог
+                        svg(id=`blog_header`).icon-blog
+                            use(xlink:href=`/images/sprite.svg#blog_header`)
+            .card__desc=desc
+            case flag
+                when 1
+                    .card__socials
+                        +socials('#909f99')
+        case buttons
+            when 1
+                .card__buttons
+                    ul.welcome-buttons__list
+                        - var welcome_buttons =[{link:'/works.html', id:'Мои работы'}, {link:'/about.html', id:'Обо мне'}, {link: '#', id: 'Блог'}]
+                        each item in welcome_buttons
+                            li.welcome-buttons__item
+                                a.welcome-buttons__link(href=`${item.link}`)=item.id
+        case icon
+            when 1
+                svg(id=`portfolio_header`).icon-portfolio
+                    use(xlink:href=`/images/sprite.svg#portfolio_header`)

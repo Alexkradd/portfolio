@@ -1,0 +1,154 @@
+@import '../../components/mixin/media.scss';
+.footer{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.footer__up{
+  display: flex;
+  background-color: rgba(55,62,66,.7);
+  padding: rem(30px) rem(30px) rem(50px) rem(30px);
+  flex: 3;
+  @include tablet{
+    flex-wrap: wrap;
+    padding: rem(30px) rem(24px) rem(30px) rem(24px);
+  }
+  @include phone{
+    flex-direction: column;
+    padding: 0 rem(10px);
+  }
+}
+.footer-info{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: white;
+  flex-wrap: wrap;
+  line-height: 1.5;
+  flex: 1;
+  @include tablet{
+    flex: 1.5;
+    font-size: 14px;
+    padding-bottom: rem(50px);
+  }
+  @include phone{
+    padding: rem(20px) 0 ;
+    font-size: 14px;
+    border-bottom: 1px solid #b5b7b8;
+    text-align: center;
+  }
+
+}
+.footer__menu{
+  display: flex;
+  flex-direction: column;
+  padding-left: rem(30px);
+  border-left: 1px solid #b5b7b8;
+  flex: 1;
+  @include tablet{
+    flex: 1.5;
+    padding-bottom: rem(50px);
+    border-left: none;
+  }
+  @include phone{
+
+    padding: rem(20px) 0 ;
+    border-left: none;
+    border-bottom: 1px solid #b5b7b8;
+  }
+
+}
+.footer-nav{
+  display: flex;
+  @include phone{
+    justify-content: center;
+  }
+}
+.nav-list{
+  display: flex;
+  padding-left: rem(5px);
+  margin: 0;
+}
+.nav__items{
+  list-style-type: none;
+  padding-right: rem(40px);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  padding-bottom: rem(30px);
+  white-space: nowrap;
+  @include laptop{
+    padding-right: rem(30px);
+  }
+  @include tablet{
+    font-size: 14px;
+    padding-right: 1rem;
+  }
+  @include phone{
+    font-size: 14px;
+    padding-right: rem(10px);
+    padding-bottom: rem(20px);
+  }
+}
+.footer-desc{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  line-height: 1.5;
+  border-left: 1px solid #b5b7b8;
+  padding-left: rem(30px);
+  flex: 1;
+  @include tablet {
+    flex: auto;
+    padding-left: 0;
+    border-left: none;
+  }
+  @include phone {
+    padding: rem(20px) 0;
+    border-left: none;
+    text-align: center;
+  }
+}
+.quote{
+  color: #b5b7b8;
+  font-family: 'roboto', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 16px;
+  padding-right: rem(30px);
+  @include laptop{
+    padding-right: 0;
+  }
+  @include tablet {
+    font-size: 14px;
+
+  }
+  @include phone {
+    font-size: 14px;
+    padding-right: 0;
+
+  }
+}
+.autor{
+  color: #b5b7b8;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  @include tablet {
+    font-size: 14px;
+
+  }
+  @include phone {
+    font-size: 14px;
+
+  }
+
+}
+.socials__icon:hover{
+  fill: #fff;
+}

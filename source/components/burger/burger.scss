@@ -1,0 +1,42 @@
+@import '../../components/mixin/media.scss';
+.nav-burger{
+  display: flex;
+  flex-direction: column;
+  z-index:1000;
+}
+.nav-burger__line{
+  width: rem(43px);
+  height: rem(6px);
+  margin-bottom: rem(11px);
+  background: white;
+  border-radius: 20%;
+  transition: all .5s linear;
+  @include tablet{
+    width: rem(30px);
+    height: rem(5px);
+    margin-bottom: rem(8px);
+    border-radius: 4px;
+  }
+  @include phone{
+    width: rem(24px);
+    height: rem(4px);
+    margin-bottom: rem(6px);
+    border-radius: 3px;
+  }
+}
+.burger-active{
+  z-index: 2000;
+}
+.burger-active .nav-burger__line:nth-child(2n+0){
+  opacity:0;
+}
+.burger-active .nav-burger__line:nth-child(1n+0){
+  transform: rotate(45deg) translateY(rem(24.5px));
+  @include tablet{transform: rotate(45deg) translateY(rem(18.5px));}
+  @include phone{transform: rotate(45deg) translateY(rem(14.5px));}
+
+}
+.burger-active .nav-burger__line:nth-child(3n+0){
+  transform: rotate(-45deg) translateY(rem(-24.5px));
+  @include phone{transform: rotate(-45deg) translateY(rem(-14.5px));}
+}

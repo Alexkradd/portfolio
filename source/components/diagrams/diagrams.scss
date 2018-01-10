@@ -1,0 +1,37 @@
+@import '../../components/mixin/media.scss';
+.circle-diagram {
+  stroke-width: rem(20px);
+}
+.diagram-list{
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  margin-bottom: rem(45px);
+  flex-wrap: wrap;
+  @include tablet{
+    justify-content: center;
+  }
+  @include phone{
+    justify-content: center;
+    margin-bottom: rem(30px);
+    flex-wrap: wrap;
+  }
+}
+.diagram__item{
+  padding-right: rem(40px);
+  @include phone{
+    padding:rem(15px) ;
+  }
+}
+.diagram__item:last-child{
+  padding-right: 0;
+  @include phone{
+    padding-right:rem(15px) ;
+  }
+}
+.diagram-title{
+  font-family: 'Roboto medium';
+  font-size: 14px;
+}

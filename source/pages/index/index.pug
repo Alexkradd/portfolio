@@ -1,0 +1,26 @@
+extends ../../base
+include ./../../components/socials/socials
+include ../../components/card/card
+block title
+    title Welcome || My portfolio
+block content
+    .Background
+        canvas.Background-canvas
+    section.section.welcome
+          header.header.welcome__header
+              button.button.welcome__button Авторизоваться
+          .flip-card
+              +card('Darya Rezanova','Личный сайт веб разработчика','welcome__card',1,1)
+              include ../../components/card-login/card-login
+
+          footer.footer.welcome__footer
+               .copy &copy; Darya Rezanova |
+               .copy создано с любовью в LoftSchool | 2018
+          script(src="./js/water.js")
+
+
+
+
+
+
+

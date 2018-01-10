@@ -1,0 +1,186 @@
+@import '../../components/mixin/media.scss';
+.card-login{
+  color: white;
+  background: rgba(18,38,32,.6);
+  border-radius: rem(7px);
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+.title{
+  font-family: 'sansus_webissimo';
+  color: #373e42;
+  font-size: 63px;
+  text-transform: uppercase;
+  //white-space: nowrap;
+  position: relative;
+  margin: 0;
+  text-align: center;
+  height: rem(90px);
+  z-index: 5;
+  &:after{
+    content: "";
+    width: rem(89px);
+    height: rem(2px);
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.title{
+  &:after {
+    background: white;
+  }
+  }
+.title-desc{
+  color: #566358;
+  font-size: 35px;
+  height: rem(60px);
+  line-height: 1.5;
+}
+.card-login__title{
+  margin: 0 rem(80px) rem(30px) rem(80px);
+  padding-top: rem(40px);
+  color: white;
+}
+.form__wrapper {
+  padding: 0 rem(20px);
+}
+.form__row-text {
+  width: 100%;
+  margin-bottom: rem(20px);
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #ffffff;
+}
+.form__label-text {
+  width: rem(45px);
+  height: rem(45px);
+  color: #c4cbcd;
+  background-color: #f0efe9;
+  text-align: center;
+  line-height: 2.8125rem;
+  border: none;
+  cursor: pointer;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+}
+.fa-user:before {
+  content: "\F007";
+}
+.form__input-text {
+  width: 100%;
+  padding: 0 rem(15px);
+  height: rem(45px);
+  border: none;
+  outline: none;
+  color: #373e42;
+}
+.fa-key:before {
+  content: "\F084";
+}
+.form__row-checkbox {
+  margin-bottom: rem(20px);
+  text-align: center;
+}
+.form__input-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+.form__label-checkbox {
+  position: relative;
+}
+.form__label-checkbox:before {
+  content: '';
+  width: rem(20px);
+  height: rem(20px);
+  border-radius: rem(4px);
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-right: rem(20px);
+  transition: .3s linear;
+}
+.form__label-checkbox:after {
+  content: '';
+  display: inline-block;
+  width: rem(20px);
+  height: rem(20px);
+  position: absolute;
+  top: rem(-1px);
+  left: 0;
+  background: url(../../../img/icons/check.svg) no-repeat center;
+  transition: .3s linear;
+  background-size: rem(15px);
+}
+.form__input-checkbox:checked + .form__label-checkbox:before {
+  background-color: #6c9c5a;
+}
+.form__row-question {
+  text-align: center;
+  margin-bottom: rem(10px);
+}
+.form__question {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+.form__row-radio {
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(40px);
+}
+.form__block-radio {
+  margin-right: rem(40px);
+}
+.form__block-radio:last-child {
+  margin-right: 0;
+}
+.form__input-radio {
+  position: absolute;
+  left: -9999px;
+}
+.form__label-radio {
+  position: relative;
+}
+.form__label-radio:after {
+  content: '';
+  position: absolute;
+  top: rem(6px);
+  left: rem(6px);
+  width: rem(8px);
+  height: rem(8px);
+  border-radius: 50%;
+  transition: .3s linear;
+}
+.form__input-radio:checked + .form__label-radio:after {
+  background-color: #6c9c5a;
+}
+.form__label-radio:before {
+  content: '';
+  display: inline-block;
+  width: rem(20px);
+  height: rem(20px);
+  margin-right: rem(10px);
+  border-radius: 50%;
+  background-color: #ffffff;
+  vertical-align: middle;
+}
+@font-face {
+  font-family: 'sansus_webissimo';
+  src: url('./../../../fonts/sansus-webissimo-regular-webfont.woff2') format('woff2'),
+  url('./../../../fonts/sansus-webissimo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.login-buttons__item{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}

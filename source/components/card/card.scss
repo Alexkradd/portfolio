@@ -1,0 +1,109 @@
+@import '../../components/mixin/media.scss';
+.card{
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+
+}
+.card__content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: rem(20px) rem(65px) rem(40px) rem(65px);
+  @include phone{
+    padding: rem(20px) rem(35px) rem(40px) rem(35px);
+  }
+  @include tablet{
+    padding: rem(20px) rem(45px) rem(40px) rem(45px);
+  }
+}
+.card__avatar{
+  padding-top: rem(35px);
+}
+.card__name{
+  font-family: 'Roboto medium';
+  font-size: 28px;
+  color: white;
+  padding-bottom: rem(10px);
+  @include tablet{
+    font-size: 35px;
+  }
+  @include phone{
+    font-size: 21px;
+  }
+}
+.card__desc{
+  font-family: 'Roboto regular';
+  font-size: 16px;
+  color: white;
+  padding-bottom: rem(35px);
+  @include tablet{
+    font-size: 14px;
+  }
+  @include phone{
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.icon-portfolio{
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  fill: rgba(18,38,32,.3);
+  z-index: -3;
+}
+.card__subclass{
+  font-family: 'sansus_webissimo';
+  color: white;
+  text-transform: uppercase;
+  font-size: 63px;
+  position: relative;
+  text-align: center;
+  height: rem(90px);
+  z-index: 5;
+  margin-top: rem(20px);
+  margin-bottom: rem(30px);
+  @include tablet{
+    font-size: 49px;
+    height: rem(60px);
+  }
+  @include phone{
+    font-size: 35px;
+    height: rem(50px);
+  }
+  &:after{
+    content: "";
+    width: rem(89px);
+    height: rem(2px);
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.icon-blog{
+  position: absolute;
+  fill: rgba(255,255,255,.1);
+  z-index: -1;
+  width: 210%;
+  height: 210%;
+  left: rem(-60px);
+  bottom: rem(-60px);
+  @include tablet{
+    left: -2.75rem;
+    bottom: -2.75rem;
+  }
+  @include phone{
+    left: -2rem;
+    bottom: -2rem;
+  }
+}
+

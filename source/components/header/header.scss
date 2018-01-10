@@ -1,0 +1,27 @@
+@import '../../components/mixin/media.scss';
+.header{
+  background-image: url('../../../img/about-bg.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  position: relative;
+}
+.header-top{
+  display: flex;
+  justify-content: space-between;
+}
+.about-socials{
+  margin-top: rem(30px);
+  margin-left: rem(25px);
+}
+.burger{
+  margin-top: rem(30px);
+  margin-right: rem(25px);
+}
+.arrow_down{
+  height: 2%;
+  margin-bottom: rem(70px);
+  fill: #becec6;
+}
+

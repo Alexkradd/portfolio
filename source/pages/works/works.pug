@@ -1,0 +1,98 @@
+extends ../../base
+include ../../components/footer/footer
+block title
+    title Works || My portfolio
+block header
+    include ../../components/header/header
+block content
+    section.works-content.section
+        .about__triangle-blog
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 85" preserveAspectRatio="none").about__triangle-icon
+                polygon(fill="#f8f9f5" points="0,0 0,86 500.8,86 500.8,75.5").about__triangle_left
+                polygon( fill="#f8f9f5" points="1000,0 1000,86 500,86 500,75.5")
+        .works-title
+            h1.title Мои работы
+            svg(id=`about_header`).works_header_svg
+                use(xlink:href=`/images/sprite.svg#works_header`)
+        .slider
+            .slider-info
+                .slider-info__container
+                    h2.title.title-desc.slider-info__title Сайт школы онлайн Образования
+                    span.slider-info__desc html, css, javascript
+                    a(href=`#`).slider-info__button Посмотреть сайт
+                    //ul.slider-info_list
+                        - var slider_info=[{slider_title:'Сайт школы онлайн Образования', slider_desc:'html, css, javascript'},{slider_title:'Сайт школы онлайн Образования', slider_desc:'html, css, javascript},{slider_title:\'Сайт школы онлайн Образования\', slider_desc:\'html, css, javascript}]
+                        each item in slider_info
+                            li.slider-info__item
+                                h2.title.title-desc.slider-info__title=item.slider_title
+                                span.slider-info__desc=item.slider_desc
+                                a(href=`#`).slider-info__button Посмотреть сайт
+            .slider-image
+                img(src=require('./../../../img/work-2.png'), alt="work").slider-image__picture
+            .slider-nav
+                .slider-nav__container
+                    a(href=`#`).slider-nav__button
+                        svg.slider-nav__icon
+                            use(xlink:href=`/images/sprite.svg#portf_arrow_down`)
+                    ul.slider-nav_list
+                        li.slider-nav__item
+                            img(src=require('./../../../img/work-2.png'), alt="work").slider-nav__picture
+                        li.slider-nav__item
+                            img(src=require('./../../../img/work-2.png'), alt="work").slider-nav__picture
+                        li.slider-nav__item
+                            img(src=require('./../../../img/work-2.png'), alt="work").slider-nav__picture
+
+                .slider-nav__container
+                    a(href=`#`).slider-nav__button
+                        svg.slider-nav__icon
+                            use(xlink:href=`/images/sprite.svg#portf_arrow_up`)
+                    ul.slider-nav_list
+                        li.slider-nav__item
+                            img(src=require('./../../../img/work-2.png'), alt="work").slider-nav__picture
+                        li.slider-nav__item
+                            img(src=require('./../../../img/work-2.png'), alt="work").slider-nav__picture
+                        li.slider-nav__item
+                            img(src=require('./../../../img/work-2.png'), alt="work").slider-nav__picture
+    section.about-me
+        h1.title.about-me__title Что обо мне говорят
+            svg(id=`about_header`).about-me__svg
+                use(xlink:href=`/images/sprite.svg#about_header`)
+        .comments
+            ul.comments-list
+                li.comments__item
+                    .comments__image
+                        img(src=require('./../../../img/koval.jpg'),alt="avatar").comments__avatar
+                    .comments__text
+                        p.comments__text-desc Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        span.comments__text-desc.comments__text-name Ковальчук Дмитрий
+                        span.comments__text-desc.comments__text-prof — основатель Loftschool
+                li.comments__item
+                    .comments__image
+                        img(src=require('./../../../img/sabancev.jpg'),alt="avatar").comments__avatar
+                    .comments__text
+                        p.comments__text-desc Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                        span.comments__text-desc.comments__text-name Сабанцев Владимир
+                        span.comments__text-desc.comments__text-prof — преподаватель
+        .card-feedback
+            h2.title.title-desc.card-feedback__title Связаться со мной
+            form(action="#" method="post" enctype="application/x-www-form-urlencoded").form-feedback
+                .form-feedback__el
+                    input(type="text" id="name" name="name" placeholder="Имя").form-feedback__el-text
+                .form-feedback__el
+                    input(type="text" id="email" name="email" placeholder="Email").form-feedback__el-text
+                .form-feedback__el
+                    textarea(type="textarea" id="message" name="message" placeholder="Ваше сообщение").form-feedback__el-text.form-feedback__el-textarea
+            .card__buttons
+                - var welcome_buttons =[{link:'/works.html', id:'Отправить'}, {link:'/about.html', id:'Очистить'}]
+                each item in welcome_buttons
+                    .welcome-buttons__item.card-feedback__buttons-item
+                        a.welcome-buttons__link(href=`${item.link}`)=item.id
+        svg.about-me__scroll
+            use(xlink:href=`/images/sprite.svg#portf_arrow_up`)
+
+
+
+
+
+block footer
+    +footer(flag,flag)

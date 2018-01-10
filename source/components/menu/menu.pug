@@ -1,0 +1,7 @@
+nav.menu
+    - var menu = [{id:'Мои работы', link:'/works.html'},{id:'блог',link:'/blog.html'},{id:'обо мне',link:'/about.html'},{id:'авторизоваться',link:'./'}]
+    each item in menu
+        ul.menu__list
+            li.menu__item
+                a.menu__link(href=`${item.link}`)=item.id
+

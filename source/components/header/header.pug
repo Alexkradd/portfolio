@@ -1,0 +1,15 @@
+include ../socials/socials
+include ../card/card
+header.header.section
+    .header-top
+        .about-socials
+            +socials('white')
+        .burger
+            include ../burger/burger
+
+    .header-body
+        +card('Darya Rezanova','Личный сайт веб разработчика',null,null,null,1)
+    svg(id=`arrow_down`).arrow_down
+        use(xlink:href=`/images/sprite.svg#arrow_down`)
+
+
