@@ -104,6 +104,13 @@ module.exports = {
                 }
             },
             {
+                test    : /\.js$/        ,
+                loader  : 'babel-loader' ,
+                options : {
+                    presets : ['env', 'es2015', 'stage-1']
+                }
+            },
+            {
                 test: /\.(jpg|png|svg)$/,
                 loader: 'file-loader',
                 options: {

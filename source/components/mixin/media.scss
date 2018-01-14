@@ -18,13 +18,29 @@ $baseFontSize : 16;
     @content;
   }
 }
+@mixin laptop2 {
+  @media (min-width: #{1200px}) and (max-width: #{1750px}) {
+    @content;
+  }
+}
 @mixin tablet {
   @media (min-width: #{480px}) and (max-width: #{$tablet-width}) {
     @content;
   }
 }
+@mixin tablet2 {
+  @media (min-width: #{768px}) and (max-width: #{970px}) {
+    @content;
+  }
+}
+
 @mixin phone {
   @media (min-width: #{$phone-width}) and (max-width: #{480px}) {
+    @content;
+  }
+}
+@mixin phone2 {
+  @media (min-width: #{481px}) and (max-width: #{767px}) {
     @content;
   }
 }

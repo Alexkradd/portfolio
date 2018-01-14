@@ -11,7 +11,7 @@ import '../index/index.scss';
 import '../../components/fonts/fonts.scss';
 import '../../components/menu/menu.scss';
 
-import initMap from'../../scripts/components/map';
+import initMap from '../../scripts/components/map';
 window.initMap=initMap;
 
 import burgerMenu from '../../scripts/components/burger-menu';
@@ -21,5 +21,24 @@ burger.addEventListener('click', function(e){
   e.preventDefault();
   burgerMenu();
 });
+
+import parallax from '../../scripts/components/paralax';
+
+window.addEventListener('scroll',function () {
+  var wScroll = window.pageYOffset;
+  parallax().init(wScroll);
+});
+
+import arrowScroll from '../../scripts/components/arrow-scroll';
+
+const arrowS = arrowScroll();
+arrowS.init({
+  arrow:document.querySelector('.arrow_down'),
+  sect:document.querySelector('.about-content'),
+  flag:true,
+});
+
+
+
 
 

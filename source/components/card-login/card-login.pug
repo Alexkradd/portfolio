@@ -25,9 +25,9 @@
                             input(id="testno" type="radio" name="test" value="робот").form__input-radio
                             label(for="testno").form__label-radio Не уверен
         .card__buttons
-                - var welcome_buttons =[{link:'/works.html', id:'На главную', type:'mainBtn'}, {link:'/about.html', id:'Войти'}]
+                - var welcome_buttons =[{link:'./', id:'На главную', type:'mainBtn'}, {link:'', id:'Войти'}]
                 each item in welcome_buttons
-                    .welcome-buttons__item.login-buttons__item
-                        a.welcome-buttons__link(href=`${item.link}`, id=`${item.type}`)=item.id
+                    .welcome-buttons__item.login-buttons__item(id =`${item.type}`)
+                        a.welcome-buttons__link(href=`${item.link}`)=item.id
 
 

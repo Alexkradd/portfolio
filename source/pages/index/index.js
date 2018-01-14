@@ -8,17 +8,24 @@ import './../../../img/icons/sprite.svg';
 //import '../../scripts/water';
 
 import flip from '../../scripts/components/flip';
-const button=document.querySelector('.welcome__button');
+if (document.querySelector('.flip-card')) {
+  console.log(11);
+  const rotate = flip();
+  rotate.init();
+}
+/*const button=document.querySelector('.welcome__button');
+const mainBtn=document.getElementById('mainBtn');
 button.onclick=function (e) {
   e.preventDefault();
   flip();
 };
-const mainBtn=document.getElementById('mainBtn');
+
 mainBtn.onclick=function (e) {
+  console.log(14);
 
   e.preventDefault();
   flip();
-};
+};*/
 
 
 

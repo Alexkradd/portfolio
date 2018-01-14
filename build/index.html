@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome || My portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2GBVsAFdNxz_cL0ilVR1c5VXzoHZHaV8&amp;callback=initMap" async defer></script>
+  <link href="./css/common.css" rel="stylesheet"><link href="./css/index.css" rel="stylesheet"></head>
+  <body>
+    <div class="wrapper">
+      <div class="Background">
+        <canvas class="Background-canvas"></canvas>
+      </div>
+      <section class="section welcome">
+        <header class="header welcome__header">
+          <button class="button welcome__button">Авторизоваться</button>
+        </header>
+        <div class="flip-card">
+          <div class="card welcome__card">
+            <div class="card__avatar"><img class="card__image" src="images/man_1.png" alt="avatar"></div>
+            <div class="card__content">
+              <div class="card__name">Darya Rezanova</div>
+              <div class="card__desc">Личный сайт веб разработчика</div>
+              <div class="card__socials">
+                <div class="socials">
+                  <ul class="socials__list">
+                    <li class="socials__item"><a class="socials__link" href="http://vk.com">
+                        <svg class="socials__icon" id="vk" fill="#909f99">
+                          <use xlink:href="/images/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__icon" id="github" fill="#909f99">
+                          <use xlink:href="/images/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__icon" id="in" fill="#909f99">
+                          <use xlink:href="/images/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card__buttons">
+              <ul class="welcome-buttons__list">
+                <li class="welcome-buttons__item"><a class="welcome-buttons__link" href="/works.html">Мои работы</a></li>
+                <li class="welcome-buttons__item"><a class="welcome-buttons__link" href="/about.html">Обо мне</a></li>
+                <li class="welcome-buttons__item"><a class="welcome-buttons__link" href="#">Блог</a></li>
+              </ul>
+            </div>
+          </div>
+<div class="card-login">
+  <h2 class="title title-desc card-login__title">Авторизуйтесь</h2>
+  <div class="form">
+    <form class="form__el" method="post" id="form-auth">
+      <div class="form__wrapper">
+        <div class="form__row-text">
+          <label class="form__label-text" for="login"><i class="fa fa-user" aria-hidden="true"></i></label>
+          <input class="form__input-text" type="text" id="login" name="login" placeholder="Логин">
+        </div>
+        <div class="form__row-text">
+          <label class="form__label-text" for="password"><i class="fa fa-key" aria-hidden="true"></i></label>
+          <input class="form__input-text" type="text" id="password" name="password" placeholder="Пароль">
+        </div>
+        <div class="form__row-checkbox">
+          <input class="form__input-checkbox" type="checkbox" value="1" id="human" name="human" checked="">
+          <label class="form__label-checkbox" for="human">Я человек</label>
+        </div>
+        <div class="form__row-question"><span class="form__question">Вы точно не робот?</span></div>
+        <div class="form__row-radio">
+          <div class="form__block-radio">
+            <input class="form__input-radio" id="testyes" type="radio" name="test" value="человек" checked="">
+            <label class="form__label-radio" for="testyes">Да</label>
+          </div>
+          <div class="form__block-radio">
+            <input class="form__input-radio" id="testno" type="radio" name="test" value="робот">
+            <label class="form__label-radio" for="testno">Не уверен</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card__buttons">
+    <div class="welcome-buttons__item login-buttons__item"><a class="welcome-buttons__link" href="/works.html" id="mainBtn">На главную</a></div>
+    <div class="welcome-buttons__item login-buttons__item"><a class="welcome-buttons__link" href="/about.html" id="undefined">Войти</a></div>
+  </div>
+</div>
+        </div>
+        <footer class="footer welcome__footer">
+          <div class="copy">&copy; Darya Rezanova |</div>
+          <div class="copy">создано с любовью в LoftSchool | 2018</div>
+        </footer>
+        <script src="./js/water.js"></script>
+      </section>
+    </div>
+  <script type="text/javascript" src="./js/common.js"></script><script type="text/javascript" src="./js/index.js"></script></body>
+</html>

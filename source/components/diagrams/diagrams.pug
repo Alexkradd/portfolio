@@ -3,30 +3,34 @@ mixin frontend
         - var diagram=[{dashoffset:'300', title:'HTML5'}, {dashoffset:'300', title:'CSS3'}, {dashoffset:'300', title:'JavaScript & jQuery'}]
         each item in diagram
             li.diagram__item
-                svg(width="110" height="110" viewport="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg").circle-diagram
-                    circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#dfdcd5" stroke-dasharray="565.48" stroke-dashoffset="0")
-                    circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#74a163" stroke-dasharray="400" stroke-dashoffset=`${item.dashoffset}`)
-                    text(x="55" y="60" text-anchor="middle" fill="#74a163").diagram-title=item.title
+                .diagram__item-container
+                    svg(width="110" height="110" viewport="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg").circle-diagram
+                        circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#dfdcd5" stroke-dasharray="565.48" stroke-dashoffset="0")
+                        circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#74a163" stroke-dasharray="400" stroke-dashoffset=`${item.dashoffset}`)
+                        span.diagram-title=item.title
 
 mixin backend
     ul.diagram-list
         - var diagram=[{dashoffset:'300', title:'PHP'}, {dashoffset:'300', title:'mySQL'}, {dashoffset:'300', title:'Node.js & npm'}, {dashoffset:'300', title:'Mongo.db'}]
         each item in diagram
             li.diagram__item
-                svg(width="110" height="110" viewport="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg").circle-diagram
-                    circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#dfdcd5" stroke-dasharray="565.48" stroke-dashoffset="0")
-                    circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#74a163" stroke-dasharray="400" stroke-dashoffset=`${item.dashoffset}`)
-                    text(x="55" y="60" text-anchor="middle" fill="#74a163").diagram-title=item.title
+                .diagram__item-container
+                    svg(width="110" height="110" viewport="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg").circle-diagram
+                        circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#dfdcd5" stroke-dasharray="565.48" stroke-dashoffset="0")
+                        circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#74a163" stroke-dasharray="400" stroke-dashoffset=`${item.dashoffset}`)
+                        span.diagram-title=item.title
 
 mixin workflow
     ul.diagram-list
         - var diagram=[{dashoffset:'300', title:'Git'}, {dashoffset:'300', title:'Webpack'}, {dashoffset:'300', title:'Bower'}]
         each item in diagram
             li.diagram__item
-                svg(width="110" height="110" viewport="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg").circle-diagram
-                    circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#dfdcd5" stroke-dasharray="565.48" stroke-dashoffset="0")
-                    circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#74a163" stroke-dasharray="400" stroke-dashoffset=`${item.dashoffset}`)
-                    text(x="55" y="60" text-anchor="middle" fill="#74a163").diagram-title=item.title
+                .diagram__item-container
+                    svg(width="110" height="110" viewport="0 0 110 110" version="1.1" xmlns="http://www.w3.org/2000/svg").circle-diagram
+                        circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#dfdcd5" stroke-dasharray="565.48" stroke-dashoffset="0")
+                        circle(r="45" cx="50%" cy="50%" fill="transparent" stroke="#74a163" stroke-dasharray="400" stroke-dashoffset=`${item.dashoffset}`)
+                        span.diagram-title=item.title
+
 
 
 

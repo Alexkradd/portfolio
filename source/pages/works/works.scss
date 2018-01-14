@@ -210,14 +210,23 @@
   @include laptop{
     padding: rem(70px) rem(316px) 0 rem(316px);
   }
+  @include laptop2{
+    padding: rem(70px) rem(420px) 0 rem(420px);
+  }
   @include tablet{
     padding: rem(70px) rem(172px) 0 rem(172px);
     height: rem(120px);
+  }
+  @include tablet2 {
+    padding: rem(70px) rem(190px) 0 rem(190px);
   }
   @include phone{
     padding: rem(40px) rem(60px) 0 rem(60px);
     height: rem(95px);
     margin-bottom: rem(20px);
+  }
+  @include phone2 {
+    padding: rem(40px) rem(120px) 0 rem(120px);
   }
 }
 .about-me__svg{
@@ -332,18 +341,48 @@
 
 }
 .card-feedback{
-  background-color: rgba(224,224,220,0.8);
-  border-radius: rem(7px);
+  //background-color: rgba(224,224,220,0.8);
+  //border-radius: rem(7px);
   margin-bottom: rem(70px);
+  //position: relative;
+  //box-sizing: border-box;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+  //text-align: center;
   @include phone{
     margin-bottom: rem(40px);
   }
+}
+.blure{
+  position: absolute;
+  height: 500px;
+  width: 380px;
+  overflow: hidden;
+  border-radius: rem(7px);
+  @include tablet{
+    width: 320px;
+  }
+  @include phone{
+    width: 295px;
+    height: 463px;
+  }
+}
+.blure-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../../img/about-me-bg.png");
+  background-repeat: no-repeat;
+  filter: blur(20px);
 }
 
 .form-feedback{
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
+  z-index: 5;
 }
 .form-feedback__el{
   margin-bottom: rem(20px);
@@ -371,6 +410,11 @@
   height: rem(140px);
   resize: none;
 }
+.card__buttons{
+  //width: 100%;
+  position: relative;
+  z-index: 5;
+}
 .card-feedback__buttons-item{
   width: 50%;
   display: flex;
@@ -381,6 +425,7 @@
   margin-bottom: 20%;
   width: rem(25px);
   height: rem(20px);
+  z-index: 1000;
   @include tablet{
     margin-bottom: 45%;
   }

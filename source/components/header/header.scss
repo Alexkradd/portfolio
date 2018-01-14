@@ -18,10 +18,21 @@
 .burger{
   margin-top: rem(30px);
   margin-right: rem(25px);
+  z-index: 2000;
 }
 .arrow_down{
-  height: 2%;
-  margin-bottom: rem(70px);
   fill: #becec6;
+  height: 25px;
+  width: 30px;
+  opacity: .8;
+}
+.arrow_down:hover{
+  opacity: 1;
+}
+.arrow-header{
+  margin-bottom: rem(70px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 

@@ -37,6 +37,10 @@
 }
 .article-titles__item_active {
   border-right: rem(3px) solid #4e8839;
+  color: #4e8839;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-style: normal;
 }
 .article-titles__link {
   display: inline-block;
@@ -44,13 +48,10 @@
   text-decoration: none;
   color: #455a64;
   line-height: 1.5;
-}
-.article-titles__item_active .article-titles__link {
-  color: #4e8839;
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
   font-style: normal;
 }
+
 .blog__content {
   width: 72%;
   padding-right: rem(70px);

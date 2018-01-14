@@ -22,8 +22,23 @@ burger.addEventListener('click', function(e){
 
 import parallax from '../../scripts/components/paralax';
 
-window.addEventListener('scroll',function (e) {
+window.addEventListener('scroll',function () {
   var wScroll = window.pageYOffset;
   parallax().init(wScroll);
 });
 
+import '../../scripts/components/blure';
+
+import arrowScroll from '../../scripts/components/arrow-scroll';
+
+const arrowS = arrowScroll();
+arrowS.init({
+  arrow:document.querySelector('.arrow_down'),
+  sect:document.querySelector('.works-content'),
+  flag:true,
+});
+arrowS.init({
+  arrow:document.querySelector('.about-me__scroll'),
+  sect:false,
+  flag:false,
+});

@@ -10,6 +10,12 @@
   left: 50%;
   transform: translate(-50%,-50%);
   width: 100%;
+  @include tablet{
+    width: 89%;
+  }
+  @include phone{
+    width: 75%;
+  }
 
 }
 .card__content{
