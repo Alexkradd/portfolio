@@ -19,10 +19,10 @@ mixin card(name,desc,subclass,flag,buttons,icon)
             when 1
                 .card__buttons
                     ul.welcome-buttons__list
-                        - var welcome_buttons =[{link:'/works.html', id:'Мои работы'}, {link:'/about.html', id:'Обо мне'}, {link: '#', id: 'Блог'}]
+                        - var welcome_buttons =[{link:'/works.html', id:'Мои работы', class: 'welcome-buttons__link-first'}, {link:'/about.html', id:'Обо мне', class: ''}, {link: '/blog.html', id: 'Блог', class: 'welcome-buttons__link-last'}]
                         each item in welcome_buttons
                             li.welcome-buttons__item
-                                a.welcome-buttons__link(href=`${item.link}`)=item.id
+                                a.welcome-buttons__link(href=`${item.link}` class=`${item.class}` )=item.id
         case icon
             when 1
                 svg(id=`portfolio_header`).icon-portfolio

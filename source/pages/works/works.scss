@@ -420,12 +420,23 @@
   display: flex;
   justify-content: center;
 }
-.about-me__scroll{
+.about-me__scroll-icon{
   fill: rgba(55,62,66,1);
-  margin-bottom: 20%;
   width: rem(25px);
   height: rem(20px);
+  @include tablet{
+    margin-bottom: 45%;
+  }
+  @include phone{
+    margin-bottom: 140%;
+  }
+}
+.about-me__scroll{
+  cursor: pointer;
+  margin-bottom: 20%;
   z-index: 1000;
+  display: flex;
+  justify-content: center;
   @include tablet{
     margin-bottom: 45%;
   }

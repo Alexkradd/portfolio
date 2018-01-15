@@ -75,24 +75,32 @@
 .nav__items{
   list-style-type: none;
   padding-right: rem(40px);
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: white;
   padding-bottom: rem(30px);
   white-space: nowrap;
   @include laptop{
     padding-right: rem(30px);
   }
   @include tablet{
-    font-size: 14px;
     padding-right: 1rem;
   }
   @include phone{
-    font-size: 14px;
     padding-right: rem(10px);
     padding-bottom: rem(20px);
   }
+}
+.nav__link{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  @include tablet{
+    font-size: 14px;
+  }
+  @include phone{
+    font-size: 14px;
+  }
+
 }
 .footer-desc{
   display: flex;

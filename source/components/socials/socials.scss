@@ -23,8 +23,10 @@
     //fill: #909f99;
     height: rem(20px);
     width: rem(30px);
+    transition: .5s;
     :hover{
       fill: #4a8039;
+      transition: 1s;
     }
   }
 

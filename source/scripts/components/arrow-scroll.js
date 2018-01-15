@@ -5,7 +5,7 @@ export default function arrowScroll () {
     const timer = setInterval(function () {
       if (flag) {
 
-        const TopMove = elem.getBoundingClientRect().top - 100;
+        const TopMove = elem.getBoundingClientRect().top - 50;
         if (TopMove < 0) {
           clearInterval(timer);
           //return;

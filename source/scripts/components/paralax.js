@@ -14,7 +14,7 @@ export default  function parallax () {
       style.webkitTransform = transformString;
     },
     init: function (wScroll) {
-      this.move(bg, wScroll, 300, false);
+      this.move(bg, wScroll, 350, false);
       this.move(user, wScroll, 5, true);
 
     },

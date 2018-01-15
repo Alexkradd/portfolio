@@ -103,39 +103,40 @@
     border-radius: 0 0 0 rem(5px);
   }
 }
-.welcome-buttons__item{
+.welcome-buttons__item {
   display: flex;
   list-style-type: none;
-  background-color: #639155;
-  padding: rem(15px) rem(32.3px);
-  border-right: rem(2px) solid #909f99;
-  &:hover{
-    background-color: #4a8039;
-  }
-  &:last-child{
-    border-color: transparent;
-    border-radius: 0 0 rem(7px) 0;
-  }
-  &:first-child {
-    border-radius: 0 0 0 rem(7px);
-  }
-  @include tablet{
-    padding: rem(15px) rem(25px);
-  }
-  @include phone{
-    padding: rem(15px) rem(20px);
-  }
-
-
 }
+
 .welcome-buttons__link{
   text-decoration: none;
   color: white;
   font-family: 'Roboto medium';
   font-size: 16px;
+  background-color: #639155;
+  padding: rem(15px) rem(32.3px);
+  border-right: rem(2px) solid #909f99;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  &:hover{
+    background-color: #4a8039;
+  }
+
+  @include tablet{
+    padding: rem(15px) rem(25px);
+  }
   @include phone{
+    padding: rem(15px) rem(20px);
     font-size: 14px;
   }
+}
+.welcome-buttons__link-first{
+  border-radius: 0 0 0 rem(7px);
+}
+.welcome-buttons__link-last{
+  border-radius: 0 0 rem(7px) 0;
+  border-right: rem(2px) solid #639155;
 }
 
 

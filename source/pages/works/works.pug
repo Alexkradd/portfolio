@@ -85,12 +85,13 @@ block content
                 .form-feedback__el
                     textarea(type="textarea" id="message" name="message" placeholder="Ваше сообщение").form-feedback__el-text.form-feedback__el-textarea
             .card__buttons
-                - var welcome_buttons =[{link:'/works.html', id:'Отправить'}, {link:'/about.html', id:'Очистить'}]
+                - var welcome_buttons =[{link:'/works.html', id:'Отправить', class: 'welcome-buttons__link-first'}, {link:'/about.html', id:'Очистить', class: 'welcome-buttons__link-last'}]
                 each item in welcome_buttons
                     .welcome-buttons__item.card-feedback__buttons-item
-                        a.welcome-buttons__link(href=`${item.link}`)=item.id
-        svg.about-me__scroll
-            use(xlink:href=`/images/sprite.svg#portf_arrow_up`)
+                        a.welcome-buttons__link(href=`${item.link}` class=`${item.class}`)=item.id
+        .about-me__scroll
+            svg.about-me__scroll-icon
+                use(xlink:href=`/images/sprite.svg#portf_arrow_up`)
 
 
 

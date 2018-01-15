@@ -6,8 +6,10 @@ mixin footer(flag,flag)
             .footer__menu
                 .footer-nav
                     ul.nav-list
-                        each item in ['Мои работы','Обо мне','Блог','Авторизация']
-                            li.nav__items=item
+                        - var nav=[{title:'Мои работы', link:'/works.html'},{title:'Обо мне', link:'/about.html'},{title:'Блог', link:'/blog.html'},{title:'Авторизация', link:'./'}]
+                        each item in nav
+                            li.nav__items
+                                a.nav__link(href=`${item.link}`)=item.title
                 .footer__socials
                     +socials('#a9acae')
             .footer-desc
